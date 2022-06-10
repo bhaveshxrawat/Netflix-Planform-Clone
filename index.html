@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><link rel="stylesheet" href="./style.css">
+  <title>Netflix Planform Clone</title>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav icon">
+    <svg viewBox="0 0 111 30" class="svg-icon svg-icon-netflix-logo" fill="#e50914" focusable="true"><g id="netflix-logo"><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z" id="Fill-14"></path></g></svg>
+  </div>
+  <div class="nav sign-in"><a href="#" title="Sign In">Sign In</a></div>
+</nav>
+  <main class="plan-page">
+<section class="ft">
+  <p class="steps">STEP <strong>1</strong> of <strong>3</strong></p>
+  <h1 class="cta">Choose the plan that’s right for you
+</h1>
+  <ul class="fts">
+    <li><span class="check">&#10003;</span>&nbsp&nbspWatch all you want. Ad-free.</li>
+    <li><span class="check">&#10003;</span>&nbsp&nbspRecommendations just for you.
+</li>
+    <li><span class="check">&#10003;</span>&nbsp&nbspChange or cancel your plan anytime.</li>
+  </ul>
+</section>
+<section class="pln-det">
+ <div class="squares">
+   <label class="input-label" for="mobile-plan"><input type="radio" name="plan" class="sq mobile"><span class="plan-name">Mobile</span></input></label>
+  
+  <label class="input-label" for="basic-plan"><input type="radio" checked name="plan" class="sq basic"><span class="plan-name">Basic</span></input></label>
+  
+<label class="input-label" for="std-plan"><input type="radio" name="plan" class="sq std"><span class="plan-name">Standard</span></input></label>  
+
+<label class="input-label" for="premium-plan"><input type="radio" name="plan" class="sq premium"><span class="plan-name">Premium</span></input></label> 
+</div>
+<section class="pln-table">
+  <table class="plans-table" role="table">
+<tbody class="plan-table-body">
+  <tr role="plan-table-row" class="row mon-price">
+    <td role="plan-table-row" class="row-name part-1-mp">Monthly Price</td> 
+    <td role="plan-table-row" id="mobile" class="part-1-mp td1 mobile td-val">₹149</td>
+    <td role="plan-table-row" id="basic" class="part-1-mp td1 basic td-val">₹199</td>
+    <td role="plan-table-row" id="std" class="part-1-mp td1 std td-val">₹499</td>
+    <td role="plan-table-row" id="premium" class="part-1-mp td1 premium td-val">₹649</td>
+  </tr>
+  <tr role="plan-table-row" class="row vid-quality">
+    <td role="plan-table-row" class="row-name td2 part-2-vq">Video Quality</td> 
+    <td role="plan-table-row" id="mobile" class="part-2-vq mobile td2 td-val">Good</td>
+    <td role="plan-table-row" id="basic" class="part-2-vq basic td2 td-val">Good</td>
+    <td role="plan-table-row" id="std" class="part-2-vq std td2 td-val">Better</td>
+    <td role="plan-table-row" id="premium" class="part-2-vq premium td2 td-val">Best</td>
+  </tr>
+  <tr role="plan-table-row" class="row resolution">
+    <td role="plan-table-row" class="row-name part-3-resolution td3">Resolution</td> 
+    <td role="plan-table-row" id="mobile" class="part-3-resolution mobile td3 td-val">480p</td>
+    <td role="plan-table-row" id="basic" class="part-3-resolution basic td3 td-val">480p</td>
+    <td role="plan-table-row" id="std" class="part-3-resolution std td3 td-val">1080p</td>
+    <td role="plan-table-row" id="premium" class="part-3-resolution premium td3 td-val">4K+HDR</td>
+  </tr>
+  <tr role="plan-table-row" class="row ducutw">
+    <td role="plan-table-row" class="row-name part-4-ducutw td4">Devices you can use to watch</td> 
+    <td role="plan-table-row" id="mobile" class="part-4-ducutw mobile td4 td-val">
+      <div class="dev-svg-cont phone tablet"><!--mobileSVGs-->
+        <div class="dev-svg phone">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg phone" focusable="false">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C4.89543 0 4 0.895431 4 2V22C4 23.1046 4.89543 24 6 24H18C19.1046 24 20 23.1046 20 22V2C20 0.89543 19.1046 0 18 0H6ZM6 2L18 2V22H6V2ZM13.5 18.5C13.5 17.6716 12.8284 17 12 17C11.1716 17 10.5 17.6716 10.5 18.5C10.5 19.3284 11.1716 20 12 20C12.8284 20 13.5 19.3284 13.5 18.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label phone">Phone</div>
+       </div>
+        <div class="dev-svg tablet">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg tablet" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C0.895431 3 0 3.89543 0 5V19C0 20.1046 0.895431 21 2 21H22C23.1046 21 24 20.1046 24 19V5C24 3.89543 23.1046 3 22 3H2ZM2 5H22V19H2V5ZM18.5 13.5C19.3284 13.5 20 12.8284 20 12C20 11.1716 19.3284 10.5 18.5 10.5C17.6716 10.5 17 11.1716 17 12C17 12.8284 17.6716 13.5 18.5 13.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label tablet">Tablet</div>
+</div>
+      </div>
+    </td>
+    <td role="plan-table-row" id="basic" class="part-4-ducutw basic td4 td-val">
+      <div class="dev-svg-cont phone tablet computer tv"><!--basicSVGs-->
+        <div class="dev-svg phone">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg phone" focusable="false">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C4.89543 0 4 0.895431 4 2V22C4 23.1046 4.89543 24 6 24H18C19.1046 24 20 23.1046 20 22V2C20 0.89543 19.1046 0 18 0H6ZM6 2L18 2V22H6V2ZM13.5 18.5C13.5 17.6716 12.8284 17 12 17C11.1716 17 10.5 17.6716 10.5 18.5C10.5 19.3284 11.1716 20 12 20C12.8284 20 13.5 19.3284 13.5 18.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label phone">Phone</div></div>
+        <div class="dev-svg tablet">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg tablet" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C0.895431 3 0 3.89543 0 5V19C0 20.1046 0.895431 21 2 21H22C23.1046 21 24 20.1046 24 19V5C24 3.89543 23.1046 3 22 3H2ZM2 5H22V19H2V5ZM18.5 13.5C19.3284 13.5 20 12.8284 20 12C20 11.1716 19.3284 10.5 18.5 10.5C17.6716 10.5 17 11.1716 17 12C17 12.8284 17.6716 13.5 18.5 13.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label tablet">Tablet</div>
+    </div>
+        <div class="dev-svg computer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg computer" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.99997 3C2.8954 3 1.99997 3.89543 1.99997 5V14C1.99997 15.1046 2.8954 16 3.99997 16H20C21.1045 16 22 15.1046 22 14V5C22 3.89543 21.1045 3 20 3H3.99997ZM3.99997 5L20 5V14H3.99997V5ZM1.11859 20.6355C4.58689 20.2212 8.23466 20 12 20C15.7653 20 19.413 20.2212 22.8813 20.6355L23.1186 18.6497C19.5701 18.2257 15.8431 18 12 18C8.15686 18 4.42984 18.2257 0.881348 18.6497L1.11859 20.6355Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label tablet">Computer</div>
+    </div>
+        <div class="dev-svg tv">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg tablet" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C0.895431 3 0 3.89543 0 5V14C0 15.1046 0.895431 16 2 16H22C23.1046 16 24 15.1046 24 14V5C24 3.89543 23.1046 3 22 3H2ZM2 5L22 5V14H2V5ZM2.1072 20.5232C5.27786 20.1813 8.59078 20 12 20C15.4092 20 18.7221 20.1813 21.8928 20.5232L22.1072 18.5347C18.8643 18.1851 15.4798 18 12 18C8.52024 18 5.13573 18.1851 1.8928 18.5347L2.1072 20.5232Z" fill="currentColor"></svg>
+        <div class="dev-svg-label tablet">TV</div>
+    </div>
+      </div>
+    </td>
+    <td role="plan-table-row" id="std" class="part-4-ducutw std td4 td-val">
+      <div class="dev-svg-cont phone tablet computer tv"><div class="dev-svg phone">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg phone" focusable="false">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C4.89543 0 4 0.895431 4 2V22C4 23.1046 4.89543 24 6 24H18C19.1046 24 20 23.1046 20 22V2C20 0.89543 19.1046 0 18 0H6ZM6 2L18 2V22H6V2ZM13.5 18.5C13.5 17.6716 12.8284 17 12 17C11.1716 17 10.5 17.6716 10.5 18.5C10.5 19.3284 11.1716 20 12 20C12.8284 20 13.5 19.3284 13.5 18.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label phone">Phone</div></div>
+        <div class="dev-svg tablet">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg tablet" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C0.895431 3 0 3.89543 0 5V19C0 20.1046 0.895431 21 2 21H22C23.1046 21 24 20.1046 24 19V5C24 3.89543 23.1046 3 22 3H2ZM2 5H22V19H2V5ZM18.5 13.5C19.3284 13.5 20 12.8284 20 12C20 11.1716 19.3284 10.5 18.5 10.5C17.6716 10.5 17 11.1716 17 12C17 12.8284 17.6716 13.5 18.5 13.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label tablet">Tablet</div>
+    </div>
+        <div class="dev-svg computer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg computer" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.99997 3C2.8954 3 1.99997 3.89543 1.99997 5V14C1.99997 15.1046 2.8954 16 3.99997 16H20C21.1045 16 22 15.1046 22 14V5C22 3.89543 21.1045 3 20 3H3.99997ZM3.99997 5L20 5V14H3.99997V5ZM1.11859 20.6355C4.58689 20.2212 8.23466 20 12 20C15.7653 20 19.413 20.2212 22.8813 20.6355L23.1186 18.6497C19.5701 18.2257 15.8431 18 12 18C8.15686 18 4.42984 18.2257 0.881348 18.6497L1.11859 20.6355Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label tablet">Computer</div>
+    </div>
+        <div class="dev-svg tv">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg tablet" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C0.895431 3 0 3.89543 0 5V14C0 15.1046 0.895431 16 2 16H22C23.1046 16 24 15.1046 24 14V5C24 3.89543 23.1046 3 22 3H2ZM2 5L22 5V14H2V5ZM2.1072 20.5232C5.27786 20.1813 8.59078 20 12 20C15.4092 20 18.7221 20.1813 21.8928 20.5232L22.1072 18.5347C18.8643 18.1851 15.4798 18 12 18C8.52024 18 5.13573 18.1851 1.8928 18.5347L2.1072 20.5232Z" fill="currentColor"></svg>
+        <div class="dev-svg-label tablet">TV</div>
+    </div></div></td>
+    <td role="plan-table-row" id="premium" class="part-4-ducutw premium td4 td-val"><div class="dev-svg-cont phone tablet computer tv"><div class="dev-svg phone">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg phone" focusable="false">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C4.89543 0 4 0.895431 4 2V22C4 23.1046 4.89543 24 6 24H18C19.1046 24 20 23.1046 20 22V2C20 0.89543 19.1046 0 18 0H6ZM6 2L18 2V22H6V2ZM13.5 18.5C13.5 17.6716 12.8284 17 12 17C11.1716 17 10.5 17.6716 10.5 18.5C10.5 19.3284 11.1716 20 12 20C12.8284 20 13.5 19.3284 13.5 18.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label phone">Phone</div></div>
+        <div class="dev-svg tablet">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg tablet" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C0.895431 3 0 3.89543 0 5V19C0 20.1046 0.895431 21 2 21H22C23.1046 21 24 20.1046 24 19V5C24 3.89543 23.1046 3 22 3H2ZM2 5H22V19H2V5ZM18.5 13.5C19.3284 13.5 20 12.8284 20 12C20 11.1716 19.3284 10.5 18.5 10.5C17.6716 10.5 17 11.1716 17 12C17 12.8284 17.6716 13.5 18.5 13.5Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label tablet">Tablet</div>
+    </div>
+        <div class="dev-svg computer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg computer" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.99997 3C2.8954 3 1.99997 3.89543 1.99997 5V14C1.99997 15.1046 2.8954 16 3.99997 16H20C21.1045 16 22 15.1046 22 14V5C22 3.89543 21.1045 3 20 3H3.99997ZM3.99997 5L20 5V14H3.99997V5ZM1.11859 20.6355C4.58689 20.2212 8.23466 20 12 20C15.7653 20 19.413 20.2212 22.8813 20.6355L23.1186 18.6497C19.5701 18.2257 15.8431 18 12 18C8.15686 18 4.42984 18.2257 0.881348 18.6497L1.11859 20.6355Z" fill="currentColor"></path></svg>
+        <div class="dev-svg-label tablet">Computer</div>
+    </div>
+        <div class="dev-svg tv">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dev-svg tablet" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C0.895431 3 0 3.89543 0 5V14C0 15.1046 0.895431 16 2 16H22C23.1046 16 24 15.1046 24 14V5C24 3.89543 23.1046 3 22 3H2ZM2 5L22 5V14H2V5ZM2.1072 20.5232C5.27786 20.1813 8.59078 20 12 20C15.4092 20 18.7221 20.1813 21.8928 20.5232L22.1072 18.5347C18.8643 18.1851 15.4798 18 12 18C8.52024 18 5.13573 18.1851 1.8928 18.5347L2.1072 20.5232Z" fill="currentColor"></svg>
+        <div class="dev-svg-label tablet">TV</div>
+    </div></div></td>
+  </tr>  
+ </body>
+  </table>
+</section>
+</section>
+</main>
+<!-- partial -->
+  
+</body>
+</html>
