@@ -3,18 +3,18 @@
   --b-red: #e50914;
 }
 @font-face {
-  font-family: Netflix Sans Bold;
+  font-family: 'Netflix Sans Bold';
   src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2);
 }
 @font-face {
-  font-family: Netflix Sans Regular;
+  font-family: 'Netflix Sans Regular';
   src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2);
 }
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Netflix Sans Regular;
+  font-family: 'Netflix Sans Regular';
 }
 svg.svg-icon.svg-icon-netflix-logo {
     height: 45px;
@@ -62,7 +62,7 @@ label.input-label {
   position: relative;
 }
 
-span.plan-name {
+/* span.plan-name {
     background-color: var(--light-red);
     position: absolute;
     border-radius: 2px;
@@ -212,4 +212,4 @@ td.row-name.part-4-ducutw {
   .squares {
     gap: 6px;
   }
-}
+} */
