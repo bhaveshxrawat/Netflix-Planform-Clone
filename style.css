@@ -80,7 +80,7 @@ label.input-label {
 .plan-container {
   display: grid;
   grid-template-columns: 2fr repeat(4, 120px);
-  /* grid-template-rows: 1fr; */
+  grid-template-rows: 140px repeat(7, auto);
   grid-column-gap: 30px;
   grid-row-gap: 0px;
   grid-template-areas:
@@ -167,7 +167,8 @@ input[type="radio"]:checked::before {
   margin-bottom: 7px;
 }
 div.plans {
-  position: relative;
+  position: sticky;
+  top: 10px;
   display: inline-block;
   margin-bottom: 5px;
   color: #fff;
@@ -175,9 +176,12 @@ div.plans {
   font-weight: 700;
 }
 .plan-grid {
-  margin: 0 16px 16px 16px;;
+  margin: 0 16px 16px 16px;
 }
-p.monthly-price,p.video-quality,p.resolution,p.devtowatch {
+p.monthly-price,
+p.video-quality,
+p.resolution,
+p.devtowatch {
   padding: 0 16px;
 }
 label {
@@ -198,9 +202,51 @@ input::before {
   left: calc(50% - var(--width) * 1 / 2);
   clip-path: polygon(0 0, 50% 100%, 100% 0);
 }
+.disclaimer small {
+  color: var(--grey);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 32px;
+}
+button {
+  font-size: 24px;
+  background-color: var(--b-red);
+  padding: 0.75em 1em;
+  width: min(440px, 95%);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 4rem;
+}
+.plans0 {
+  grid-area: 1 / 1 / 2 / 6;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+.mobile-plan {
+  grid-area: mobile;
+}
+.basic-plan {
+  grid-area: basic;
+}
+.std-plan {
+  grid-area: standard;
+}
+.premium-plan {
+  grid-area: premium;
+}
 @media screen and (max-width: 950px) {
   .plan-container {
     grid-template-columns: 2fr repeat(4, 90px);
+    grid-template-rows: 110px repeat(7, auto);
     column-gap: 20px;
   }
   input[type="radio"] {
@@ -213,39 +259,39 @@ input::before {
 }
 @media screen and (max-width: 720px) {
   .plans0 {
-    display: none;
+    grid-area: mobile / mobile / mobile / premium-end;
   }
   .plan-container {
     grid-template-areas:
-    "mobile basic standard premium"
-    "mon-price mon-price mon-price mon-price"
-    "one49  one99 four99   six49"
-    "line   line  line     line"
-    "vid-quality vid-quality vid-quality vid-quality"
-    "mGood       bGood       better      best"
-    "line1       line1       line1       line1"
-    "resolution resolution resolution resolution"
-    "m480p   b480p 1080p   4KHDR"
-    "line2   line2   line2  line2"
-    "ducutw ducutw ducutw ducutw" 
-    "mPT    bptct sptct    pptct";
+      "mobile basic standard premium"
+      "mon-price mon-price mon-price mon-price"
+      "one49  one99 four99   six49"
+      "line   line  line     line"
+      "vid-quality vid-quality vid-quality vid-quality"
+      "mGood       bGood       better      best"
+      "line1       line1       line1       line1"
+      "resolution resolution resolution resolution"
+      "m480p   b480p 1080p   4KHDR"
+      "line2   line2   line2  line2"
+      "ducutw ducutw ducutw ducutw"
+      "mPT    bptct sptct    pptct";
 
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
   }
-  p.monthly-price{
+  p.monthly-price {
     grid-area: mon-price / mon-price;
     text-align: center;
   }
-  p.video-quality{
+  p.video-quality {
     grid-area: vid-quality / vid-quality;
     text-align: center;
   }
-  p.resolution{
+  p.resolution {
     grid-area: resolution / resolution;
     text-align: center;
   }
-  p.devtowatch{
+  p.devtowatch {
     grid-area: ducutw / ducutw;
     text-align: center;
   }
