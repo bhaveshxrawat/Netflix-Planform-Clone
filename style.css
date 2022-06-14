@@ -1,215 +1,264 @@
 :root {
   --light-red: #ef6b72;
   --b-red: #e50914;
+  --grey: #737373;
+  --d-grey: #333333;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 @font-face {
-  font-family: 'Netflix Sans Bold';
-  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2);
+  font-family: "Netflix Sans";
+  font-weight: 700;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2)
+    format("woff2");
 }
 @font-face {
-  font-family: 'Netflix Sans Regular';
-  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2);
+  font-family: "Netflix Sans";
+  font-weight: 300;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 400;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2)
+    format("woff2");
 }
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  font-family: 'Netflix Sans Regular';
+  font-family: "Netflix Sans";
 }
 svg.svg-icon.svg-icon-netflix-logo {
-    height: 45px;
-    width: 165px;
+  height: 45px;
+  width: 165px;
 }
 nav.nav {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    border: 1px solid #e6e6e6;
-    padding: 15px 2.5%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  border: 1px solid #e6e6e6;
+  padding: 15px 2.5%;
 }
 span.check {
-    color: #e50914;
-    font-weight: 700;
+  color: #e50914;
+  font-weight: 700;
 }
 ul.fts {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 section.ft {
-    padding: 0 16px;
-    margin-top: 1.99em;
-    margin-left: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #333;
+  padding: 0 16px;
+  margin-top: 1.99em;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #333;
 }
 p.steps {
-    font-size: 0.7em;
+  font-size: 0.7em;
 }
 h1.cta {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 2rem;
+  margin: 0;
 }
 a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 label.input-label {
   position: relative;
 }
-
-/* span.plan-name {
-    background-color: var(--light-red);
-    position: absolute;
-    border-radius: 2px;
-    width: 120px;
-    height: 120px;
-    left: 0;
-    bottom: 4px;
+.plan-container {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 120px);
+  /* grid-template-rows: 1fr; */
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+    "blank          mobile basic standard premium"
+    "monthly-price  one49  one99 four99   six49"
+    "line           line   line  line     line"
+    "video-quality  mGood  bGood better   best"
+    "line1           line1   line1  line1     line1"
+    "resolution     m480p   b480p 1080p   4KHDR"
+    "line2        line2   line2  line2     line2"
+    "ducutw         mPT    bptct sptct    pptct";
 }
-span.plan-name {
-    display: flex;
-    place-items: center;
-    justify-content: center;
+hr {
+  height: 1px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  border-width: 0;
 }
-input.sq {
-    width: 120px;
-    height: 120px;
-    margin: 0;
+hr#line {
+  grid-area: line / line;
 }
-span.plan-name {
-    color: #FFFFFF;
-    font-weight: 800;
+hr#line1 {
+  grid-area: line1 / line1;
 }
-.squares {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    gap: 32px;
-    margin: 0 auto;
-    padding-top: 12px;
-    position: sticky;
-    top: 0;
-    background-color: white;
+hr#line2 {
+  grid-area: line2 / line2;
 }
-input.premium {
-    margin-right: 15px;
+.plan-container strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--grey);
+  place-self: center;
+}
+.plan-container p {
+  font-size: 16px;
+  color: var(--d-grey);
 }
 main.plan-page {
-    max-width: 990px;
-    margin: 0 auto;
+  max-width: 990px;
+  margin: 0 auto;
 }
-tr.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    min-height: 60px;
-    border-bottom: 1px solid #ccc;
-    padding-left: 16px;
+input.sq {
+  width: 120px;
+  height: 120px;
+  margin: 0;
 }
-table.plans-table {
-    width: 100%;
-}
-td.row-name {
-    width: 45%;
-}
-section.pln-det {
-  padding: 0 16px;
-}
-td.td-val {
-    padding: 12px 15px;
-    width: calc(65%/4);
-    font-weight: 600;
-    text-align: center;
-}
-section.pln-table {
-    color: #737373;
-}
-td.part-4-ducutw.td-val {
-    margin-top: 8px;
-}
-tr.row.ducutw {
-    border-bottom: 0;
-    display: flex;
-    align-items: start;
-    min-height: 60px;
-    padding-left: 16px;
-}
-td.row-name.part-4-ducutw {
-    margin-top: 20px;
-}
-.dev-svg-label {
-    font-size: 12px;
+span.plan-name {
+  color: #ffffff;
+  font-weight: 800;
 }
 .dev-svg-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 10px;
-    align-content: center;
+  color: var(--grey);
 }
-@media screen and (max-width: 800px) {
-    .sign-in > a {
-    font-size: 14px;
-    font-weight: bolder;
+.dev-svg-label {
+  font-size: 12px;
+  font-weight: 700;
 }
-    svg.svg-icon.svg-icon-netflix-logo {
-    height: 20px;
-    width: 75px;
+input[type="radio"] {
+  appearance: none;
+  background-color: var(--light-red);
+  margin: 0;
+  position: relative;
+  font: inherit;
+  color: currentColor;
+  width: 120px;
+  height: 120px;
+  border-radius: 2px;
 }
-  ul.fts {
-    font-size: 18px;
+input[type="radio"]:checked {
+  background-color: var(--b-red);
+  filter: drop-shadow(0 0 2px var(--b-red));
 }
-  span.plan-name, input.sq {
-    width: clamp(75px, 21vw ,90px);
+input[type="radio"]:checked::before {
+  bottom: calc(0px - 10px);
+}
+.dev-svg {
+  text-align: center;
+}
+.dev-svg-cont {
+  padding-top: 16px;
+}
+.dev-svg-label {
+  margin-bottom: 7px;
+}
+div.plans {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+.plan-grid {
+  margin: 0 16px 16px 16px;;
+}
+p.monthly-price,p.video-quality,p.resolution,p.devtowatch {
+  padding: 0 16px;
+}
+label {
+  position: absolute;
+  top: calc(50% - 5.545px);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 1;
+}
+input::before {
+  --width: 20px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  width: 20px;
+  background-color: inherit;
+  left: calc(50% - var(--width) * 1 / 2);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+@media screen and (max-width: 950px) {
+  .plan-container {
+    grid-template-columns: 2fr repeat(4, 90px);
+    column-gap: 20px;
+  }
+  input[type="radio"] {
+    width: 90px;
     height: 90px;
-}
-  .squares {
-    display: flex;
-    gap: 0;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-}
-  input.premium {
-    margin-right: 4px;
-}
-  td.row-name {
-    font-size: 14px;
-        width: 100%;
-    text-align: center;
-}
-  td.td-val {
+  }
+  label {
     font-size: 12px;
-    padding: 8px;
-}
-  tr.row {
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-left: 0;
-}
-  td.row-name.part-4-ducutw {
-    margin-top: 3px;
-}
-  tr.row.ducutw {
-    padding-left: 0;
-  }
-  }
-@media screen and (max-width: 435px) {
-  span.plan-name {
-    font-size: 13px;
   }
 }
-@media screen and (max-width: 385px) {
-  .squares {
-    gap: 6px;
+@media screen and (max-width: 720px) {
+  .plans0 {
+    display: none;
   }
-} */
+  .plan-container {
+    grid-template-areas:
+    "mobile basic standard premium"
+    "mon-price mon-price mon-price mon-price"
+    "one49  one99 four99   six49"
+    "line   line  line     line"
+    "vid-quality vid-quality vid-quality vid-quality"
+    "mGood       bGood       better      best"
+    "line1       line1       line1       line1"
+    "resolution resolution resolution resolution"
+    "m480p   b480p 1080p   4KHDR"
+    "line2   line2   line2  line2"
+    "ducutw ducutw ducutw ducutw" 
+    "mPT    bptct sptct    pptct";
+
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+  }
+  p.monthly-price{
+    grid-area: mon-price / mon-price;
+    text-align: center;
+  }
+  p.video-quality{
+    grid-area: vid-quality / vid-quality;
+    text-align: center;
+  }
+  p.resolution{
+    grid-area: resolution / resolution;
+    text-align: center;
+  }
+  p.devtowatch{
+    grid-area: ducutw / ducutw;
+    text-align: center;
+  }
+  input[type="radio"] {
+    width: 100%;
+    height: 90px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .plan-container strong {
+    font-size: 12px;
+  }
+  .plan-container {
+    column-gap: 5px;
+  }
+}
