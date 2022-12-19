@@ -300,6 +300,9 @@ button {
     height: 90px;
   }
 }
+.active, strong.active {
+  color: var(--b-red);
+}
 @media screen and (max-width: 425px) {
   .plan-container strong {
     font-size: 12px;

@@ -51,19 +51,19 @@
           <div class="plans0"></div>
           <div class="plans mobile-plan">
             <label id="mobile" for="netflix-mobile">Mobile</label>
-            <input type="radio" name="netflix" value="Mobile" onclick="mob()" id="netflix-mobile">
+            <input type="radio" name="netflix" value="Mobile" id="netflix-mobile">
           </div>
           <div class="plans basic-plan">
             <label id="basic" for="netflix-basic">Basic</label>
-            <input type="radio" name="netflix" value="Basic" onclick="bas()" id="netflix-basic" checked>
+            <input type="radio" name="netflix" value="Basic" id="netflix-basic" checked>
           </div>
           <div class="plans std-plan">
             <label id="std" for="netflix-std">Standard</label>
-            <input type="radio" name="netflix" value="Standard" onclick="std()" id="netflix-std">
+            <input type="radio" name="netflix" value="Standard" id="netflix-std">
           </div>
           <div class="plans premium-plan">
             <label id="premium" for="netflix">Premium</label>
-            <input type="radio" name="netflix" value="Premium" onclick="pmm()" id="netflix-premium">
+            <input type="radio" name="netflix" value="Premium" id="netflix-premium">
           </div>
           <p class="monthly-price">Monthly Price</p>
           <strong class="monthly-price misSelected">₹149</strong>
@@ -170,11 +170,6 @@
     <br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer></footer>
-    <script>
-      function mob(){
-        var a = document.getElementById("netflix-mobile")
-        a.classList.add("mobile-is-Selected")
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
