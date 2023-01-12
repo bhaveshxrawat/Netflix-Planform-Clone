@@ -6,11 +6,13 @@ const everyOption = document.querySelectorAll('.misSelected, .bisSelected, .sisS
 //When we're using forEach method for options, all the elements targeted by that respected class are getting iterated over.
 options.forEach((option, i) => { //misSelected, 0
   option.forEach((singleOption) => { //misSelected's elements
+    console.log("singleOption[i]", singleOption)
     singleOption.onclick = () => { //click on misSelected elements
-      everyOption.forEach((everySOption) => { //remove active from any other class
+      everyOption.forEach((everySOption) => {
         everySOption.classList.remove('active'); //remove active from any other class
       });
       options[i].forEach((innerSingleOption) => { 
+        console.log(options[i])
         innerSingleOption.classList.add('active');
       });
       allInput[i].checked = true;
@@ -30,7 +32,7 @@ options.forEach((option, i) => { //misSelected, 0
 });
 allInput.forEach((singleInput, i) => {
     singleInput.onchange = () => {
-        everyOption.forEach((everySOption) => { //remove active from any other class
+        everyOption.forEach((everySOption) => {
             everySOption.classList.remove('active'); //remove active from any other class
           });
         options[i].forEach((innerSingleOption) => { 
